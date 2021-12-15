@@ -8,7 +8,7 @@ This ROS package contains de necessary files to simulate the cloud-detector proj
 - Nvidia driver (Recommended)
 - Git
 
-## Build Gazebo
+## Download and Build Gazebo
 To get this simulation working properly, it is necesary to use a modified version of the Gazebo simulation. Once ROS is installed, remove Gazebo if it was installed previously:
 
 ```
