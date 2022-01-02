@@ -8,9 +8,12 @@
     </include>
 
     <!-- Global light source -->
-    <include>
+    <!-- <include>
       <uri>model://sun</uri>
-    </include>
+    </include>-->
+    <light name = "sun" type="directional">
+    <pose>0 0 2 0 0 0</pose>
+    </light>
 
     <scene>
       <shadows>true</shadows>

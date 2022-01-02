@@ -99,6 +99,16 @@ Once the workspace has been compiled and source, the simulation can be run:
 roslaunch camera_simulation camera_world.launch
 ```
 
+## Sun position script
+
+Inside the scripts folder there is a test.py that can be use to test the prediction of the sun in the sky relative to a point in the surface of Earth. Latitud, longitud and time data can be changed to obtain the diferent azimuth and elevation angles.
+
+To test it, modify the values in the script and run it:
+
+```
+python test_sun_pos.py
+```
+
 ## References
 - <https://answers.gazebosim.org//question/20177/clouds-from-screen-is-not-visible-in-camera-image/>
 - <http://gazebosim.org/tutorials?tut=install_from_source&cat=install#ROSUsers>
