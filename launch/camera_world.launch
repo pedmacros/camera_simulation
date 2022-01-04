@@ -20,16 +20,26 @@
   <!-- Load the URDF into the ROS Parameter Server -->
   <param name="robot_description"
     command="$(find xacro)/xacro --inorder '$(find camera_simulation)/urdf/camera.xacro'" />
+  
+  <!-- Run a python script to the send a service call to gazebo_ros to spawn the two cameras -->
+  <group ns = "camera1">
+    <param name="tf_prefix" value="camera1_tf" />
+    <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+      args="-x 5 -y 0 -z 0 -urdf -model camera1 -param /robot_description"/>
+  </group>
 
-  <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
-  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-    args="-urdf -model camera -param robot_description"/>
+  <group ns = "camera2">
+    <param name="tf_prefix" value="camera2_tf" />
+    <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+    args="-x -5 -y 0 -z 0 -urdf -model camera2 -param /robot_description"/>
+  </group>
   
   <!-- Spawn a moving sphere-->
   <!-- <node name="spawn_model" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
     args="-file /home/pedro/camera_ws/src/camera_simulation/urdf/cloud.sdf -sdf -model my_cloud"/>-->
   
-  <node name="image_viewer" pkg="image_view" type="image_view" args="image:=/camera1/image_raw"/>
+  <node name="image1_viewer" pkg="image_view" type="image_view" args="image:=/camera1/camera/image_raw"/>
+  <node name="image2_viewer" pkg="image_view" type="image_view" args="image:=/camera2/camera/image_raw"/>
   <!-- ros_control rrbot launch file -->
   <!--include file="$(find rrbot_control)/launch/rrbot_control.launch" /-->
 

@@ -1,6 +1,8 @@
 # CAMERA SIMULATION
 This ROS package contains de necessary files to simulate the cloud-detector project in Gazebo.
 
+Currently, the simulation consist of two fisheye cameras pointing to the sky and one static cloud.
+
 ## Requirements
 - PC with Ubuntu 18.04
 - ROS Melodic

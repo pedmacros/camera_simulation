@@ -7,24 +7,31 @@
       <uri>model://ground_plane</uri>
     </include>
 
+
+    <include>
+      <pose>0 0 10 0 0 0</pose>
+      <uri>model://my_cloud</uri>
+    </include>
+
     <!-- Global light source -->
-    <!-- <include>
+    <include>
       <uri>model://sun</uri>
-    </include>-->
-    <light name = "sun" type="directional">
-    <pose>0 0 2 0 0 0</pose>
-    </light>
+    </include>
+    <!--<light name = "sun" type="directional">
+      <pose>0 0 2 0 0 0</pose>
+    </light>-->
 
     <scene>
       <shadows>true</shadows>
-      <background>0.0 0.0 0.5 1</background>
-      <sky>
+      <background>0.0 0.0 1.0 1</background>
+      <!--<sky>
       <time>15.0</time>
         <clouds>
           <speed>12</speed>
         </clouds>
-      </sky>
+      </sky>-->
     </scene>
+
     <!-- Focus camera on tall pendulum -->
     <gui fullscreen='0'>
       <camera name='user_camera'>
