@@ -25,13 +25,13 @@
   <group ns = "camera1">
     <param name="tf_prefix" value="camera1_tf" />
     <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-      args="-x 5 -y 0 -z 0 -urdf -model camera1 -param /robot_description"/>
+      args="-x 500 -y 0 -z 0 -urdf -model camera1 -param /robot_description"/>
   </group>
 
   <group ns = "camera2">
     <param name="tf_prefix" value="camera2_tf" />
     <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-    args="-x -5 -y 0 -z 0 -urdf -model camera2 -param /robot_description"/>
+    args="-x 0 -y 0 -z 0 -urdf -model camera2 -param /robot_description"/>
   </group>
   
   <!-- Spawn a moving sphere-->

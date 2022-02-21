@@ -27,7 +27,7 @@
     <sensor type="wideanglecamera" name="camera">
       <update_rate>30.0</update_rate>
       <camera name="head">
-        <horizontal_fov>3.141592</horizontal_fov>
+        <horizontal_fov>3.141526</horizontal_fov>
         <image>
           <width>600</width>
           <height>600</height>
