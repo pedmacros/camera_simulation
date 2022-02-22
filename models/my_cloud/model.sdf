@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
 <sdf version="1.4">
   <model name="cloud">
+  <!--<enable_wind>true</enable_wind>-->
     <pose>0 0 0 0 0 0</pose>
-    <static>false</static>
+    <!--<static>false</static>-->
     <link name="body">
+      <enable_wind>true</enable_wind>
       <visual name="visual">
         <geometry>
           <mesh>

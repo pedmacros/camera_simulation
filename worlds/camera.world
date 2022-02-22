@@ -3,6 +3,7 @@
   <!-- We use a custom world for the camera so that the camera angle is launched correctly -->
 
   <world name="default">
+      <gravity> 0 0 0 </gravity>
     <include>
       <uri>model://ground_plane</uri>
     </include>
@@ -24,7 +25,6 @@
     <scene>
       <shadows>true</shadows>
       <background>0.0 0.0 1.0 1</background>
-      <gravity> 0.0 0.0 0.0 </gravity>
       <!--<sky>
       <time>15.0</time>
         <clouds>
@@ -32,6 +32,10 @@
         </clouds>
       </sky>-->
     </scene>
+
+    <wind>
+      <linear_velocity>20 0 0</linear_velocity>
+    </wind>
 
     <!-- Focus camera on tall pendulum -->
     <gui fullscreen='0'>
