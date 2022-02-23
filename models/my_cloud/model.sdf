@@ -10,7 +10,7 @@
         <geometry>
           <mesh>
           <uri>model://my_cloud/meshes/cloud.stl</uri>
-          <scale>100 100 100</scale>
+          <scale>100 100 1</scale>
           </mesh>
         </geometry>
       </visual>
