@@ -5,7 +5,7 @@
   <world name="default">
       <gravity> 0 0 0 </gravity>
     <include>
-      <uri>model://ground_plane</uri>
+      <uri>model://solar_plant</uri>
     </include>
 
 
